@@ -31,4 +31,4 @@ Run the script by clicking the "Source" button at the top right of the script. A
 <br/>
 When adding your own datasets to be analyzed using AVIR.R, please split it into two .csv files, one with the height, and the other with the area, of the chromatographic feature peaks. This is as shown below, alternatively in the PeakArea_Demo.csv and PeakHeight_Demo.csv files in the repository.
 
-<img src = "https://github.com/HuanLab/AVIR_Demo/blob/main/images/FileFormattingInput.png" width = "850" >
+<img src = "https://github.com/HuanLab/AVIR.R/blob/main/images/FileFormattingInput.png" width = "850" >
