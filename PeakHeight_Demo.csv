@@ -1,4 +1,4 @@
-Alignment ID,Average Rt(min),Average Mz,Sample_1,Sample_2,Sample_3,Sample_4,Sample_5,Sample_6,Sample_7,Sample_8,Sample_9,Sample_10,Sample_11,Sample_12,Sample_13,Sample_14
+Alignment ID,RT,m/z,Sample_1,Sample_2,Sample_3,Sample_4,Sample_5,Sample_6,Sample_7,Sample_8,Sample_9,Sample_10,Sample_11,Sample_12,Sample_13,Sample_14
 1,0.763,80.94795,3402,6867,6022,5196,3967,3630,7032,4562,3603,4393,5263,4148,5810,3813
 2,0.785,90.97664,8013,17047,16551,10678,10513,10649,12727,12779,9999,11026,14450,11811,12685,10081
 3,0.7,116.07057,1161,1787,3321,5247,2064,1824,3896,2068,1158,1031,3025,2029,5695,1993
