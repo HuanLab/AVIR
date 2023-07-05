@@ -41,19 +41,10 @@ library(caret)
 Working_directory <- "C:/User/Users/Avir_Demo" 
 setwd(Working_directory)
 
+## Read the AVIR model
+Avir = readRDS("Avir.rds")
 
 ###############################################################
-## This trains the model and tests it to ensure it works
-## Read the training data.
-#Trainingdata = read.csv('Trainingdata.csv')
-
-## Train the AVIR model
-Avir = svm(formula = Label ~ .,
-                 data = Trainingdata,
-                 type = 'C-classification',
-                 kernel = 'linear',
-                 probability=TRUE)
-
 ## Read the testing data.
 Testingdata = read.csv('Testingdata.csv')
 
