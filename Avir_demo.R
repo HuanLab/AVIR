@@ -44,17 +44,6 @@ setwd(Working_directory)
 ## Read the AVIR model
 Avir = readRDS("Avir.rds")
 
-###############################################################
-## Read the testing data.
-Testingdata = read.csv('Testingdata.csv')
-
-# Predicting the Test set results
-y_pred = predict(Avir, newdata = Testingdata[-5])
-
-# Making the Confusion Matrix
-cm = table(Testingdata [, 5], y_pred)
-cm
-
 #################################################################
 ## The following code is an example of how I calculated the value of the Avir feature
 ## Read the table of metabolic feature using peak area and peak height to represent the intensity respectively
@@ -102,7 +91,7 @@ for (i in 1:nrow(df_PA) ) {
   n1 = sum(df_feature[,2] > 1000)
   
   ## Add one more noise filter, filter the feature that contains noise, low-intensity feature
-  n2 = sum(df_feature[,2] < 500)
+  n2 = sum(df_feature[,2] <= 1000)
   
 ## Here is how I specifically filter the low-quality metabolic feature by noise.
 ## For a feature with an intensity of 1000 in over 20% of samples and no samples with noise-like intensity (< 500)
@@ -166,4 +155,4 @@ df_result$Prediction <- Prediction
 df_result <- cbind(df_result, df_predict[,2:5])
 
 ## Output the prediction result in the working directory.
-write.csv(df_result, file = "Avir_PredictionResult.csv")
+write.csv(df_result, file = "Avir_PredictionResult.csv", row.names = FALSE)
