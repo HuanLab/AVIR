@@ -20,7 +20,7 @@
 ## It is a demo format for calculating the value of machine learning feature for the model prediction.
 ## The code that generate the testing data is also shown below.
 
-## The detailed instruction be be found in our github, named as "User Manual of AVIR for Peak integration Quality Prediction"
+## The detailed instruction be be found in our github, named as "AVIR User_Instruction.pdf"
 ## The design and discussion of the model can also be found in the user manual.
 
 
@@ -38,11 +38,11 @@ library(caret)
 
 ## Set a working directory (the folder position) in your computer, this step specifies the location of your files
 ## Remember to use forward slashes, not backslashes if you copy the directory path
-Working_directory <- "C:/User/Users/Avir_Demo" 
+Working_directory <- "C:/User/Users/AVIR_Demo" 
 setwd(Working_directory)
 
 ## Read the AVIR model
-Avir = readRDS("Avir.rds")
+Avir = readRDS("AVIR.rds")
 
 #################################################################
 ## The following code is an example of how I calculated the value of the Avir feature
@@ -155,4 +155,4 @@ df_result$Prediction <- Prediction
 df_result <- cbind(df_result, df_predict[,2:5])
 
 ## Output the prediction result in the working directory.
-write.csv(df_result, file = "Avir_PredictionResult.csv", row.names = FALSE)
+write.csv(df_result, file = "AVIR_PredictionResult.csv", row.names = FALSE)
